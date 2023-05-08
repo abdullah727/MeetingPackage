@@ -1,13 +1,70 @@
-body {
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Styles for dark and light mode */
+
+.dark,
+.light {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  font-family: "Nunito", sans-serif;
+  color: black;
+  font-weight: 600;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.dark {
+  color: #fff;
+  background: #262626;
+  height: 100vh;
+}
+
+p {
+  margin: 0 !important;
+}
+
+/* Making rsuite dropdown according to figma design */
+.dark .rs-dropdown-toggle,
+.light .rs-dropdown-toggle {
+  background: transparent;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  font-family: "Nunito";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #16181b;
+  padding: 8px 12px;
+  min-width: 275px;
+  text-align: left;
+}
+
+.dark .rs-dropdown-toggle {
+  border: 1px solid #808080;
+  color: #fff;
+}
+
+.dark .rs-toggle-presentation,
+.light .rs-toggle-presentation {
+  background: #cbd5e1 !important;
+}
+.dark .rs-toggle-presentation {
+  background: rgb(107 114 128) !important;
+}
+
+.dark .rs-toggle-checked .rs-toggle-presentation,
+.light .rs-toggle-checked .rs-toggle-presentation {
+  background: #0050ff !important;
+}
+
+.dark .rs-dropdown-menu,
+.light .rs-dropdown-menu {
+  width: 100%;
+}
+
+.dark .rs-dropdown-toggle-caret,
+.light .rs-dropdown-toggle-caret {
+  height: 2em;
+  width: 2em;
+  color: rgba(100, 116, 139, 1);
 }
